@@ -1,0 +1,60 @@
+<div class="electro-catalog-banner">
+	<div class="inner-width">
+		<div class="banner-title-selection-top">
+			<h2 class="banner-catalog-title">Електрогітари</h2>
+		</div>
+
+		<div class="banner-title-selection-middle">
+			<h2 class="banner-catalog-title">Електрогітара, напевно, найкраща і найкрутіша з різновидів гітар. Професійні музиканти та любителі обожнюють її за приголомшливу різноманітність звучання, широкі можливості маніпуляцій зі звуком, вона універсальна і практично не має меж в застосуванні.</h2>
+		</div>
+
+		<div class="banner-title-selection-bottom">
+
+		</div>
+	</div>
+</div>
+
+<br>
+
+<div class="inner-width">
+	<h2 class="selection-title">Електрогітари</h2>
+	<div class="border-late-product"></div>
+</div>
+
+<div class="catalog-selection">
+	<div class="side-bar">
+		{{electroguitar-filter
+			name=name
+			size=size
+			fabricator=fabricator
+			uppderDeck=upperDeck
+			loverDeck=loverDeck
+			vulture=vulture
+			fingerBoard=fingerBoard
+			color=color
+			minPrice=minPrice
+			maxPrice=maxPrice
+			quantityOfStruns=quantityOfStruns
+			bodyMaterial=bodyMaterial
+			neckDesign=neckDesign
+			numberOfFrets=numberOfFrets
+			menzura=menzura
+			pickupType=pickupType
+			bodyShape=bodyShape
+			bridge=bridge
+			electronics=electronics
+		}}
+	</div>
+
+	<div class="product-selection">
+		{{#each model as |product|}}
+			{{ui-product
+				title=product.name
+				price=product.price
+				image=product.picture
+				productId=product.id
+			}}
+		{{/each}}
+	</div>
+</div>
+{{outlet}}

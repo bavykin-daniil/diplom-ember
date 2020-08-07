@@ -1,0 +1,15 @@
+<div class="product-box">
+	<img class="products-box-img" alt="Зображення товару" src={{product.picture}}>
+	<h3 class="products-title">
+		{{product.name}}
+	</h3>
+
+	<div class="products-price">
+		{{product.price}} 
+	</div>
+
+	<div class="products-btn-section">
+		{{#link-to "product" productId class="product-btn-details"}}Детальніше<i class="fas fa-angle-right"></i>{{/link-to}}
+		<a {{action "deleteFavoriteProduct"}} class="product-btn-details">Видалити<i class="fas fa-trash"></i></a>
+	</div>
+</div>

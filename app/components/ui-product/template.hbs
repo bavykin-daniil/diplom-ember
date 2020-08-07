@@ -1,0 +1,14 @@
+<div class="product-box">
+	<img class="products-box-img" alt="Зображення товару" src={{image}}>
+	<h3 class="products-title">
+		{{title}}
+	</h3>
+
+	<div class="products-price">
+		{{price}} грн
+	</div>
+
+	<div class="products-btn-section">
+		{{#link-to "product" productId class="product-btn-details"}}Детальніше<i class="fas fa-angle-right"></i>{{/link-to}}
+	</div>
+</div>

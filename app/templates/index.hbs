@@ -1,0 +1,133 @@
+		<div class="main-banner">
+			<div class="inner-width">
+				<div class="banner-title-selection-top">
+					<h2 class="banner-title">В нашому інтернет-магазині ви знайдете найкращі товари по доступним цінам</h2>
+				</div>
+
+				<div class="banner-title-selection-middle">
+					<h3 class="banner-title">Ви завжди можете передивитись товари перейшови до каталогу</h3>
+				</div>
+
+				<div class="banner-title-selection-bottom">
+					<a class="go-to-calalog-btn" href="catalog">Перейти до каталогу</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="service-selection">
+			<div class="inner-width">
+				<h2 class="selection-title">Наші послуги</h2>
+				<div class="border"></div>
+
+				<div class="services-container">
+					<div class="service-box">
+						<div class="service-icon">
+							<i class="fas fa-guitar"></i>
+						</div>
+
+						<div class="service-title">
+							Багатий та чудовий вибір гітар
+						</div>
+
+						<div class="service-description">
+							В нашому магазині покупці завжди зможуть знайти
+							потрібний їм музикальний інструмент який буде в 
+							чудовому стані та надасть хорошу службу
+						</div>
+					</div>
+
+					<div class="service-box">
+						<div class="service-icon">
+							<i class="fas fa-truck"></i>
+						</div>
+
+						<div class="service-title">
+							Швидка та надійна доставка товару
+						</div>
+
+						<div class="service-description">
+							Наш магазин швидко і надійно доставляє товари до
+							наших покупців на всій території України
+						</div>
+					</div>
+
+					<div class="service-box">
+						<div class="service-icon">
+							<i class="fas fa-user-friends"></i>
+						</div>
+
+						<div class="service-title">
+							Професійний персонал
+						</div>
+
+						<div class="service-description">
+							Ви завжди можете задати питання нашим адміністраторам,
+							з вами дуже швидко зв'яжуться і дадуть відповіді на
+							всі питання, котрі вас цікавлять.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="space"></div>
+
+		{{#ui-slider stepWidth=400 as |sl| }}
+			{{#each model as |product|}}
+				{{#sl.slide}}
+				{{ui-product-item
+					title=product.name
+					price=product.price
+					image=product.picture
+					productId=product.id
+				}}
+				{{/sl.slide}}
+			{{/each}}
+		{{/ui-slider}}
+
+		<div class="space"></div>
+
+		<div class="social-network">
+			<div class="inner-width">
+				<h2 class="selection-title">Ми в соціальних мережах</h2>
+				<div class="border-social-network"></div>
+
+				<div class="social-network-container">
+					<div class="social-network-box">
+						<a class="social-network-icon" href=""><i class="fab fa-vk"></i></a>
+						<h4 class="social-network-title">Вконтакті</h4>
+					</div>
+
+					<div class="social-network-box">
+						<a class="social-network-icon" href=""><i class="fab fa-odnoklassniki"></i></a>
+						<h4 class="social-network-title">Однокласники</h4>
+					</div>
+
+					<div class="social-network-box">
+						<a class="social-network-icon" href=""><i class="fab fa-instagram"></i></a>
+						<h4 class="social-network-title">Інстаграм</h4>
+					</div>
+
+					<div class="social-network-box">
+						<a class="social-network-icon" href=""><i class="fab fa-twitter"></i></a>
+						<h4 class="social-network-title">Твітер</h4>
+					</div>
+
+					<div class="social-network-box">
+						<a class="social-network-icon" href=""><i class="fab fa-facebook-f"></i></a>
+						<h4 class="social-network-title">Фейсбук</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="space"></div>
+
+		<div class="contact-with-us">
+			<div class="inner-width">
+				<h2 class="selection-title">Зв'язок з нами</h2>
+				<div class="border-contact-with-us"></div>
+				{{ui-contact-with-us}}
+			</div>
+		</div>
+{{outlet}}

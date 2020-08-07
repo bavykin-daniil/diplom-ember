@@ -1,0 +1,36 @@
+<div class="inner-width">
+	<h2 class="selection-title">Редагування товарів</h2>
+	<div class="border"></div>
+</div>
+
+<div class="product-selection">
+	{{log model}}
+	{{#each model as |product|}}
+		{{ui-update-products
+			  name=product.name
+			  purpose=product.purpose
+			  fabricator=product.fabricator
+			  size=product.size
+			  upperDeck=product.upperDeck
+			  loverDeck=product.loverDeck
+			  vulture=product.vulture
+			  fingerBoard=product.fingerBoard
+			  color=product.color
+			  price=product.price
+			  guarantie=product.guarantie
+			  image=product.picture
+			  quantityOfStruns=product.quantityOfStruns
+			  bodyMaterial=product.bodyMaterial
+			  neckDesign=product.neckDesign
+		      numberOfFrets=product.numberOfFrets
+			  menzura=product.menzura
+			  deckForm=product.deckForm
+			  pickupType=product.pickupType
+			  bodyShape=product.bodyShape
+			  bridge=product.bridge
+			  electronics=product.electronics
+			  id=product.id
+		}}
+	{{/each}}
+</div>
+{{outlet}}

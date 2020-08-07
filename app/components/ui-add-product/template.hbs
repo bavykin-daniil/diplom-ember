@@ -1,0 +1,111 @@
+<div class="add-product-selection">
+	<h2 class="selection-title">Додавання нового товару</h2>
+	<div class="border-add-product"></div>
+	<form name="addForm">
+    	<div class="add-product-box">
+        	<div class="add-product-box-top">
+            	<div class="add-product-text-box">
+            		<input type="text" placeholder="Назва" value={{name}} oninput={{action (mut name) value='target.value'}}>
+            	</div>
+
+              <div class="add-product-text-box">
+                <input type="text" placeholder="Тип гiтари" value={{purpose}} oninput={{action (mut purpose) value='target.value'}}>
+              </div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Виробник" value={{fabricator}} oninput={{action (mut fabricator) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Розмір" value={{size}} oninput={{action (mut size) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Верхня дека" value={{upperDeck}} oninput={{action (mut upperDeck) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Нижня дека"value={{loverDeck}} oninput={{action (mut loverDeck) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Гриф" value={{vulture}} oninput={{action (mut vulture) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Накладка грифу" value={{fingerBoard}} oninput={{action (mut fingerBoard) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="text" placeholder="Колір" value={{color}} oninput={{action (mut color) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="number" placeholder="Ціна" value={{price}} oninput={{action (mut price) value='target.value'}}>
+            	</div>
+
+            	<div class="add-product-text-box">
+              		<input type="number" placeholder="Гарантія" value={{guarantie}} oninput={{action (mut guarantie) value='target.value'}}>
+            	</div>
+
+              <p style="text-align:center" >Додадковi атрибути</p>
+
+              <div class="add-product-text-box">
+                  <input type="number" placeholder="Кiлькiсть струн (Акустична/Електро/Бас-гiтара)" value={{quantityOfStruns}} oninput={{action (mut quantityOfStruns) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Матерiал корпусу (Електро/Бас-гiтара)" value={{bodyMaterial}} oninput={{action (mut bodyMaterial) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Конструкцiя грифу (Електро/Бас-гiтара)" value={{neckDesign}} oninput={{action (mut neckDesign) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="number" placeholder="Кiлькiсть ладiв (Електро/Бас-гiтара)" value={{numberOfFrets}} oninput={{action (mut numberOfFrets) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="number" placeholder="Мензура (Електро/Бас-гiтара)" value={{menzura}} oninput={{action (mut menzura) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Форма деки (Акустична гiтара)" value={{deckForm}} oninput={{action (mut deckForm) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Тип звукознимача (Електрогiтара)" value={{pickupType}} oninput={{action (mut pickupType) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Форма корпусу (Електрогiтара)" value={{bodyShape}} oninput={{action (mut bodyShape) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Бридж (Електрогiтара)" value={{bridge}} oninput={{action (mut bridge) value='target.value'}}>
+              </div>
+
+              <div class="add-product-text-box">
+                  <input type="text" placeholder="Електронiка (Бас-гiтара)" value={{electronics}} oninput={{action (mut electronics) value='target.value'}}>
+              </div>
+        	</div>
+
+        		<div class="addImage-btn-section">
+        			<input class="addImage-btn" type="file" onchange={{action (mut images) value='target.files'}}>
+        		</div>
+            
+          <div class="image-view-container">
+  					<div class="image-view">
+  						<img class="image-view-image" src={{currentImage}} alt="Зображення">
+  					</div>
+  				</div>				
+
+        	<div class="add-product-box-bottom">
+
+        		<a {{action "addProduct"}} class="add-product-btn" href="">Додати товар<i class="fas fa-user-edit"></i></a>
+        		{{#link-to "admin-panel" class="add-product-btn"}}Приховати форму<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+        	</div>
+        </div>
+    </form>
+</div>

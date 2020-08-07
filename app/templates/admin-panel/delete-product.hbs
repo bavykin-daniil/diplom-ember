@@ -1,0 +1,15 @@
+<div class="inner-width">
+	<h2 class="selection-title">Видалення товарів</h2>
+	<div class="border"></div>
+</div>
+
+<div class="product-selection">
+	{{#each model as |product|}}
+		{{ui-delete-product
+			title=product.name
+			image=product.picture
+			id=product.id
+		}}
+	{{/each}}
+</div>
+{{outlet}}

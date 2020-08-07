@@ -1,0 +1,35 @@
+<form class="contact-with-us-form" action="" method="post">
+	<input
+	id="PIB"
+	class="contact-with-us-form-text"
+	type="text"
+	placeholder="Введіть ім'я"
+	value={{FIO}}
+	oninput={{action (mut FIO) value='target.value'}}
+	>
+	<input
+	id="emailAdress"
+	class="contact-with-us-form-text"
+	type="email"
+	placeholder="Введіть вашу поштову адресу"
+	value={{emailAdress}}
+	oninput={{action (mut emailAdress) value='target.value'}}
+	>
+	<input
+	id="phoneNumber"
+	class="contact-with-us-form-text"
+	type="text"
+	placeholder="Введіть ваш телефоний номер у форматі +38(ххх)(ххх)(хххх)"
+	value={{mobileNumber}}
+	oninput={{action (mut mobileNumber) value='target.value'}}
+	>
+	<textarea
+	id="messages"
+	class="contact-with-us-form-text"
+	placeholder="Введіть ваше повідомлення"
+	value={{message}}
+	oninput={{action (mut message) value='target.value'}}
+	>
+	</textarea>
+	<a {{action "addQuestion"}} class="contact-with-us-form-btn">Відправити<i class="fas fa-comment"></i></a>
+</form>

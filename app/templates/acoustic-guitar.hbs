@@ -1,0 +1,54 @@
+<div class="acoustic-catalog-banner">
+	<div class="inner-width">
+		<div class="banner-title-selection-top">
+			<h2 class="banner-catalog-title">Акустичні гітари</h2>
+		</div>
+
+		<div class="banner-title-selection-middle">
+			<h2 class="banner-catalog-title">Акустична або естрадна гітара в музичному плані - це справжній алмаз з безліччю граней. Однакову насолоду звуком отримують і любитель-гітарист, і учень музичного училища, і музикант-віртуоз. Для гітари не важливо хто ви і що уявляєте собою як музикант - вона щедро дарує чари музики всім, хто доторкається до струн.</h2>
+		</div>
+
+		<div class="banner-title-selection-bottom">
+
+		</div>
+	</div>
+</div>
+
+<br>
+
+<div class="inner-width">
+	<h2 class="selection-title">Акустичні гітари</h2>
+	<div class="border-late-product"></div>
+</div>
+
+<div class="catalog-selection">
+	<div class="side-bar">
+		{{acoustic-guitar-filter
+			name=name
+			size=size
+			fabricator=fabricator
+			uppderDeck=upperDeck
+			loverDeck=loverDeck
+			vulture=vulture
+			fingerBoard=fingerBoard
+			color=color
+			minPrice=minPrice
+			maxPrice=maxPrice
+			quantityOfStruns=quantityOfStruns
+			deckForm=deckForm
+		}}
+	</div>
+
+	<div class="product-selection">
+		{{#each model as |product|}}
+			{{ui-product
+				title=product.name
+				price=product.price
+				image=product.picture
+				productId=product.id
+			}}
+		{{/each}}
+	</div>
+</div>
+{{outlet}}
+{{outlet}}

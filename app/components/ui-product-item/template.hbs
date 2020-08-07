@@ -1,0 +1,14 @@
+<div class="late-products-box">
+  <img class="late-products-box-img" alt="Зображення товару" src={{image}}>
+  <h3 class="late-products-title">
+    {{title}}
+  </h3>
+  <div class="late-products-description">
+    {{price}} грн
+  </div>
+  <div class="late-products-btn-section">
+    {{#link-to "product" productId class="product-btn-details"}}
+      Детальніше
+    <i class="fas fa-angle-right"></i>{{/link-to}}
+  </div>
+</div>

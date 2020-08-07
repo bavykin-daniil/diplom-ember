@@ -1,0 +1,23 @@
+{{#if session.isAuthenticated}}
+<div class="purchase-history-box">
+	<img class="products-box-img" alt="Зображення товару" src={{image}}>
+	<h3 class="products-title">
+		{{title}}
+	</h3>
+
+	<div class="purchase-history-desc">
+		<h3><p>ПІБ:</p>{{fio}}</h3>
+		<h3><p>Електронна адреса:</p>{{emailAdress}}</h3>
+		<h3><p>Номер мобільного телефону:</p>{{mobileNumber}}</h3>
+		<h3><p>Місто:</p>{{city}}</h3>
+		<h3><p>Номер поштового відділення:</p>{{postOfficeNumber}}</h3>
+	</div>
+
+	<div class="products-btn-section">
+		{{#link-to "product" productId class="product-btn-details"}}Детальніше<i class="fas fa-angle-right"></i>{{/link-to}}
+	</div>
+</div>
+{{else}}
+<div>
+</div>
+{{/if}}

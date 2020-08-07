@@ -1,0 +1,137 @@
+<div class="top-side-bar">
+	<h2>Фільтр пошуку</h2>
+</div>
+
+<div class="search-box">
+	<input
+	class="search-txt"
+	type="text"
+	placeholder="Введіть назву гітари"
+	value={{name}}
+	onchange={{action (mut name) value="target.value" }}
+	>
+	<a class="search-btn" href="#"><i class="fas fa-search"></i></a>
+</div>
+
+<div class="query-list">
+	<div class="query">
+		<h3 class="query-name">Ціна</h3>
+		Від
+		<input
+		class="price"
+		type="text"
+		value={{price}}
+		onchange={{action (mut minPrice) value="target.value" }}
+		>
+		до <input
+		class="price"
+		type="text"
+		value={{price}}
+		onchange={{action (mut maxPrice) value="target.value" }}
+		>
+	</div>
+
+	<div class="query">
+		<h3 class="query-name">Виробник</h3>
+		<select class="query-value" onchange={{action (mut fabricator) value="target.value" }}>
+			<option value="">Оберіть вид</option>
+			<option value="">Cort</option>
+			<option value="">Fender</option>
+			<option value="">Gibson</option>
+			<option value="">Lag</option>
+			<option value="">Yamaha</option>
+			<option value="">Taylor guitars</option>
+		</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Розмір</h3>
+	<select class="query-value" onchange={{action (mut size) value="target.value" }}>
+		<option value="">Оберіть розмір</option>
+		<option value="1/4">1/4</option>
+		<option value="2/4">2/4</option>
+		<option value="3/4">3/4</option>
+		<option value="4/4">4/4</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Верхня дека</h3>
+	<select class="query-value" onchange={{action (mut uppderDeck) value="target.value" }}>
+		<option value="">Оберіть вид</option>
+		<option value="Агастис">Агатис</option>
+		<option value="Біле дерево">Біле дерево</option>
+		<option value="Кедр">Кедр</option>
+		<option value="Липа">Липа</option>
+		<option value="Сосна">Сосна</option>
+		<option value="Ялина">Ялина</option>
+	</select> 
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Нижня дека</h3>
+	<select class="query-value" onchange={{action (mut loverDeck) value="target.value" }}>
+		<option value="">Оберіть вид</option>
+		<option value="Агастис">Агатис</option>
+		<option value="Біле дерево">Біле дерево</option>
+		<option value="Вишневий ліс">Вишневий ліс</option>
+		<option value="Грецький горіх">Грецький горіх</option>
+		<option value="Палісандр">Палісандр</option>
+		<option value="Сапеле">Сапеле</option>
+		<option value="Червоне дерево">Червоне дерево</option>
+		<option value="Ялина">Ялина</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Гриф</h3>
+	<select class="query-value" onchange={{action (mut vulture) value="target.value" }}>
+		<option value="">Оберіть вид</option>
+		<option value="Береза">Береза</option>
+		<option value="Кедр">Кедр</option>
+		<option value="Клен">Клен</option>
+		<option value="Липа">Липа</option>
+		<option value="Мора">Мора</option>
+		<option value="Палісандр">Палісандр</option>
+		<option value="Сапеле">Сапеле</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Накладка грифу</h3>
+	<select class="query-value" onchange={{action (mut fingerBoard) value="target.value" }}>
+		<option value="">Оберіть вид</option>
+		<option value="Береза">Береза</option>
+		<option value="Клен">Клен</option>
+		<option value="Липа">Липа</option>
+		<option value="Палісандр">Палісандр</option>
+		<option value="Червоне дерево">Червоне дерево</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Колір</h3>
+	<select class="query-value" onchange={{action (mut color) value="target.value" }}>
+		<option value="">Оберіть колір</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Кількість струн</h3>
+	<select class="query-value" onchange={{action (mut quantityOfStruns) value="target.value" }}>
+		<option value="">Оберіть кількість</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="12">12</option>
+	</select>
+	</div>
+
+	<div class="query">
+	<h3 class="query-name">Форма деки</h3>
+	<select class="query-value" onchange={{action (mut deckForm) value="target.value" }}>
+		<option value="">Оберіть вид</option>
+		<option value="Djambo">Djambo</option>
+		<option value="Dreadnought">Dreadnought</option>
+	</select>
+	</div>
+</div>

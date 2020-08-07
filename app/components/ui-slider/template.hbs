@@ -1,0 +1,18 @@
+<div class="inner-width-slider">
+	<h2 class="selection-title">Недавно додані товари</h2>
+	<div class="border-late-product"></div>
+
+	<div class="late-products-container">
+		<div class="slider-container" style={{sliderContainerStyle}}>
+			 {{yield (hash
+		        	slide=(component 'ui-slider/slide'
+		            registerSlide=(action 'registerSlide')
+		            unregisterSlide=(action 'unregisterSlide')
+		          )
+		        )
+		      }}
+		</div>
+	</div> 
+	<a class="prev" {{action 'prev'}}>&#10094;</a>
+  	<a class="next" {{action 'next'}}>&#10095;</a>
+</div>

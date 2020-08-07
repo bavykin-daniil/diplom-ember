@@ -1,0 +1,29 @@
+<form>
+    <div class="update-information-box">
+        <div class="update-information-box-top">
+          	<div class="text-box">
+          		<input type="text" placeholder="Введіть ПIБ" value={{FIO}} oninput={{action (mut FIO) value='target.value'}}>
+         	</div>
+
+        	<div class="text-box">
+          		<input type="text" placeholder="Введіть електронну пошту" value={{emailAdress}} oninput={{action (mut emailAdress) value='target.value'}}>
+        	</div>
+
+        	<div class="text-box">
+        		<input type="text" placeholder="Введіть ваш телефоний номер" value={{mobileNumber}} oninput={{action (mut mobileNumber) value='target.value'}}>
+        	</div>
+
+            <div class="text-box">
+              	<input type="text" placeholder="Місто" value={{city}} oninput={{action (mut city) value='target.value'}}>
+            </div>
+
+            <div class="text-box">
+              	<input type="text" placeholder="Номер відділення нової пошти" value={{postOfficeNumber}} oninput={{action (mut postOfficeNumber) value='target.value'}}>
+            </div>
+        </div>
+
+        <div class="update-information-box-bottom">
+        	<a {{action "addOrder"}} class="update-information-btn" href="">Оформити замовлення<i class="fas fa-plus"></i></a>
+        </div>
+    </div>
+</form>

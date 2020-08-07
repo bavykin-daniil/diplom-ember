@@ -1,0 +1,29 @@
+{{#if session.isAuthenticated}} 
+<div class="space"></div>
+
+<div class="update-password-selection">
+	<h2 class="selection-title">Змінення паролю</h2>
+	<div class="border-update-password"></div>
+	<form>
+    	<div class="update-password-box">
+        	<div class="update-password-box-top">
+            	<div class="text-box">
+                    {{input value=password type="password" placeholder="Введіть пароль"}}
+            	</div>
+
+            	<div class="text-box">
+              		{{input value=repeatPassword type="password" placeholder="Введіть пароль повторно"}}
+            	</div>
+        	</div>
+
+        	<div class="update-password-box-bottom">
+        		<a {{action "updatePassword"}} class="update-password-btn" href="">Внести змінення<i class="fas fa-user-edit"></i></a>
+        		{{#link-to "user-cabinet" class="update-password-btn"}}Приховати форму<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+        	</div>
+        </div>
+    </form>
+</div>
+{{else}}
+<div>
+</div>
+{{/if}}

@@ -1,0 +1,22 @@
+<div class="space"></div>
+
+<div class="update-password-selection">
+	<h2 class="selection-title">Відновлення паролю</h2>
+	<div class="border-update-password"></div>
+	<p style="text-align:center" >Для того, щоб відновити пароль треба ввести електронну адресу та вiдповiсти на лист, що надiйде до елетронної адреси</p>
+	<form>
+    	<div class="update-password-box">
+        	<div class="update-password-box-top">
+            	<div class="text-box">
+                    {{input value=email type="text" placeholder="Введіть електронну адресу"}}
+            	</div>
+        	</div>
+
+        	<div class="update-password-box-bottom">
+        		<a {{action "updatePasswordWithEmail"}} class="update-password-btn" href="">Вiдправити листа<i class="fas fa-user-edit"></i></a>
+        		{{#link-to "index" class="update-password-btn"}}Приховати форму<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+        	</div>
+        </div>
+    </form>
+</div>
+{{yield}}

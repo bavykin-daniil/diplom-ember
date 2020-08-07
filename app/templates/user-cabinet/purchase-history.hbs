@@ -1,0 +1,22 @@
+<h2 class="selection-title-order">Історія замовлень користувача</h2>
+	<div class="border-order"></div>
+
+<div class="product-selection">
+	{{#each model as |order|}}
+		{{ui-order-product
+			FIO=order.FIO
+			emailAdress=order.emailAdress
+			mobileNumber=order.mobileNumber
+			city=order.city
+			postOfficeNumber=order.postOfficeNumber
+			product=order.product
+			created=order.created
+			dateOrder=order.dateOrder
+		}}
+	{{/each}}
+</div>
+
+<div class="favorites-btn-selection">
+	{{#link-to "user-cabinet" class="favorites-btn"}}Приховати форму<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+</div>
+{{outlet}}

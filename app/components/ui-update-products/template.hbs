@@ -1,0 +1,103 @@
+{{#if session.isAuthenticated}}
+<div class="product-details-selection-top">
+	<div class="update-product-details-image-selection">
+		<img class="product-details-image" src={{image}}>
+
+		<div class="update-addImage-btn-section">
+	  		<input class="addImage-btn" type="file" onchange={{action (mut images) value='target.files'}}>
+	  	</div>	
+	</div>
+
+	<div class="product-update-description-selection">
+		<div class="product-details-update-description">
+			<h2>Модель:</h2><h2>{{input class="update-input" value=name type="text"}}</h2>
+		</div>
+
+		<div class="product-details-update-description">
+			<h2>Тип:</h2><h2>{{input class="update-input" value=purpose type="text"}}</h2>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Виробник:</h3><h3>{{input class="update-input" value=fabricator type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Розмір:</h3><h3>{{input class="update-input" value=size type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Верхня дека:</h3><h3>{{input class="update-input" value=upperDeck type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Нижня дека:</h3><h3>{{input class="update-input" value=loverDeck type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Гриф:</h3><h3>{{input class="update-input" value=vulture type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Накладка грифу:</h3><h3>{{input class="update-input" value=fingerBoard type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Колір:</h3><h3>{{input class="update-input" value=color type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Ціна:</h3><h3>{{input class="update-input" value=price type="text"}} грн</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Гарантія:</h3><h3>{{input class="update-input" value=guarantie type="text"}} місяців</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Кiлькiсть струн:</h3><h3>{{input class="update-input" value=quantityOfStruns type="text"}} шт</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Матерiал корпусу:</h3><h3>{{input class="update-input" value=bodyMaterial type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Конструкцiя грифу:</h3><h3>{{input class="update-input" value=neckDesign type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Кiлькiсть ладiв:</h3><h3>{{input class="update-input" value=numberOfFrets type="text"}} шт</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Мензура:</h3><h3>{{input class="update-input" value=menzura type="text"}} мм</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Форма деки:</h3><h3>{{input class="update-input" value=deckForm type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Тип звукознимача:</h3><h3>{{input class="update-input" value=pickupType type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Форма корпусу:</h3><h3>{{input class="update-input" value=bodyShape type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Бридж:</h3><h3>{{input class="update-input" value=bridge type="text"}}</h3>
+		</div>
+
+		<div class="product-details-update-description">
+			<h3>Електронiка:</h3><h3>{{input class="update-input" value=electronics type="text"}}</h3>
+		</div>
+
+		<div class="update-btn-selection">
+			<a {{action "updateProduct"}} class="update-details-table-btn" href="">Оновити <i class="fas fa-pen"></i></a>
+		</div>
+	</div>
+</div>
+{{else}}
+{{/if}}
+{{yield}}

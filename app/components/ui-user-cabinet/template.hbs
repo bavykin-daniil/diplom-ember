@@ -1,0 +1,60 @@
+{{#if session.isAuthenticated}}
+<div class="user-cabinet-selection"> 
+	<div class="inner-width">
+		<h2 class="selection-title">Особистий кабінет</h2>
+		<div class="user-border"></div>
+
+		<div class="user-cabinet-container">
+			<div class="user-cabinet-column">
+				<div class="user-cabinet-icon">
+					<i class="fas fa-address-card"></i>
+				</div>
+
+				<div class="user-cabinet-title">
+					<h2>Мій обліковий запис</h2>
+				</div>
+
+				<div class="user-cabinet-description">
+					{{#link-to "user-cabinet.update-informartion"}}Змінити контактну інформацію<i class="fas fa-chevron-right"></i>{{/link-to}}
+					{{#link-to "user-cabinet.update-email"}}Змінити електронну пошту<i class="fas fa-chevron-right"></i>{{/link-to}}
+					{{#link-to "user-cabinet.update-password"}}Змінити пароль<i class="fas fa-chevron-right"></i>{{/link-to}}
+				</div>
+			</div>
+
+			<div class="user-cabinet-column">
+				<div class="user-cabinet-icon">
+					<i class="fas fa-heart"></i>
+				</div>
+
+				<div class="user-cabinet-title">
+					<h2>Обране</h2>
+				</div>
+
+				<div class="user-cabinet-description">
+					{{#link-to "user-cabinet.favorites"}}Переглянути обране<i class="fas fa-chevron-right"></i>{{/link-to}}
+				</div>
+			</div>
+
+			<div class="user-cabinet-column">
+				<div class="user-cabinet-icon">
+					<i class="fas fa-shopping-cart"></i>
+				</div>
+
+				<div class="user-cabinet-title">
+					<h2>Історія замовлень</h2>
+				</div>
+
+				<div class="user-cabinet-description">
+					{{#link-to "user-cabinet.purchase-history"}}Переглянути історію<i class="fas fa-chevron-right"></i>{{/link-to}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{else}}
+<div class="isAuthenticatedFalse">
+	<i class="fas fa-exclamation-triangle isAuthenticatedFalse-image"></i>
+
+	<h2 class="isAuthenticatedFalse-description">Для того, щоб користуватись особистим кабiнетом, треба спочатку пройти реєстрацію або авторизуватись</h2>
+</div>
+{{/if}}

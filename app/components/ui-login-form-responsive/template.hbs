@@ -1,0 +1,49 @@
+{{#if session.isAuthenticated}}
+	<div class="submenu-auth-user-section">
+		<div class="submenu-auth-user">
+			<i class="fas fa-user"></i>
+		</div>
+	</div>
+
+	<div class="submenu-auth-description">
+		<p>{{session.currentUser.displayName}}</p>
+	</div>
+
+	<div class="submenu-auth-btn-section">
+		<a {{action "logout"}} class="user-btn">Вихiд <i class="fas fa-sign-out-alt"></i></a>
+		{{#link-to "user-cabinet" class="user-btn"}}Кабiнет <i class="fas fa-user"></i>{{/link-to}}
+	</div>
+{{else}}
+	<div class="user-login-input-selection">
+		<div class="user-login">
+	        <i class="fas fa-user"></i>
+	        <input
+	        type="text"
+	        name=""
+	        placeholder="Електрона адреса"
+	        value={{email}}
+	        oninput={{action (mut email) value="target.value"}}
+	        >
+	    </div>
+
+	    <div class="user-password">
+	        <i class="fas fa-lock"></i>
+	        <input
+	        type="password"
+	        name=""
+	        placeholder="Пароль"
+	        value={{password}}
+	        oninput={{action (mut password) value="target.value"}}
+	        >
+	    </div>
+    </div>
+
+    <div class="fogiven-password-section" >
+    	{{#link-to "fogiven-password" class="fogiven-password"}} Забули пароль? {{/link-to}}
+    </div>
+
+    <div class="user-btn-section">
+        <a {{action "login"}}class="user-btn" href="">Вхід</a>
+        {{#link-to "sign-up" class="user-btn"}}Реєстрація{{/link-to}}
+    </div>
+{{/if}}

@@ -1,0 +1,55 @@
+<div class="sign-up-selection">
+	<div class="inner-width">
+		<h2 class="sign-up-box-title">Реєстрація нового користувача</h2>
+		<div class="sign-up-box-border"></div>
+		<form class="sign-up-form" action="" method="post" name="signUpForm">
+			<div class="sign-up-text-box">
+				<h3>ПIБ</h3>
+				<input
+				id="nameUser"
+				type="text"
+				placeholder="Введіть своє прізвище, ім`я та по-батькові"
+				value={{displayName}}
+            	oninput={{action (mut displayName) value="target.value"}}
+            	>
+			</div>
+
+			<div class="sign-up-text-box">
+				<h3>Електронна адреса</h3>
+				<input
+				id="emailAdress"
+				type="text"
+				placeholder="Введіть свою електронну пошту"
+				value={{email}}
+            	oninput={{action (mut email) value="target.value"}}
+				>
+			</div>
+
+			<div class="sign-up-text-box">
+				<h3>Пароль</h3>
+				<input
+				id="password"  
+				type="password" 
+				placeholder="Введіть свій пароль"
+				value={{password}}
+            	oninput={{action (mut password) value="target.value"}}
+				>
+			</div>
+
+			<div class="sign-up-text-box">
+				<h3>Пiдтвердження паролю</h3>
+				<input
+				id="repeatPassword" 
+				type="password" 
+				placeholder="Введіть свій пароль поворно"
+				value={{repeatPassword}}
+            	oninput={{action (mut repeatPassword) value="target.value"}}
+				>
+			</div>
+
+			<div class="sign-up-box-bottom">
+				<a {{action "signUp"}}class="sign-up-btn" href="">Реэстрацiя <i class="fas fa-user-plus"></i></a>
+			</div>		
+		</form>
+	</div>
+</div>

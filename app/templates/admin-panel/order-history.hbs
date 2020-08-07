@@ -1,0 +1,19 @@
+<div class="inner-width">
+	<h2 class="selection-title">Замовлення користувачів</h2>
+	<div class="border"></div>
+</div>
+
+<div class="order-selection">
+	{{#each model as |order|}}
+		{{ui-order-product
+				FIO=order.FIO
+				emailAdress=order.emailAdress
+				mobileNumber=order.mobileNumber
+				city=order.city
+				postOfficeNumber=order.postOfficeNumber
+				product=order.product
+				created=order.created
+				dateOrder=order.dateOrder
+		}}
+	{{/each}}
+</div>

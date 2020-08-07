@@ -1,0 +1,31 @@
+<div class="container">
+	<header>
+		<h1 class="banner"><img class="logo" src="/images/logo.png">GuitarHouse</h1>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="show-menu-btn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul class="header-ul">
+			<div class="user-cabinet-responsive">
+			    {{ui-login-form-responsive}}
+			</div>
+			<li class="header-li">{{#link-to "application" class="menu-btn"}}Головна{{/link-to}}</li>
+			<li class="header-li">{{#link-to "catalog" class="menu-btn"}}Каталог{{/link-to}}</li>
+			<li class="header-li">{{#link-to "about-us" class="menu-btn"}}Про нас{{/link-to}}</li>
+			<li class="header-li">{{#link-to "application" class="menu-user-cabinet-btn"}}Особистий кабінет{{/link-to}}
+            	{{ui-login-form}}
+          	</li>
+			<label for="chk" class="hide-menu-btn">
+				<i class="fas fa-times"></i>
+			</label>
+		</ul>
+	</header>
+
+	<main>
+		{{outlet}}
+	</main>
+
+	<footer>
+			Copyright © 2017-2019 Guitar House. Усі права знаходяться під захистом.
+	</footer>
+</div>

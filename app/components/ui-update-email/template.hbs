@@ -1,0 +1,25 @@
+{{#if session.isAuthenticated}}
+<div class="space"></div>
+
+<div class="update-information-selection">
+	<h2 class="selection-title">Редагування електронної пошти</h2>
+	<div class="border-update-information"></div>
+	<form>
+    	<div class="update-information-box">
+        	<div class="update-information-box-top">
+            	<div class="text-box">
+              		{{input class="update-input" value=email type="text"}}
+            	</div>
+        	</div>
+
+        	<div class="update-information-box-bottom">
+        		<a {{ action "updateUserEmail" }}class="update-information-btn" href="">Внести змінення<i class="fas fa-user-edit"></i></a>
+        		{{#link-to "user-cabinet" class="update-information-btn"}}Приховати форму<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+        	</div>
+        </div>
+    </form>
+</div>
+{{else}}
+<div>
+</div>
+{{/if}}

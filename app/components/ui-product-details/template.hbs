@@ -1,0 +1,155 @@
+<div class="product-details-selection-top">
+	<div class="product-details-image-selection">
+		<img class="product-details-image" src={{image}}>
+	</div>
+
+	<div class="product-details-description-selection">
+		<div class="product-details-description">
+			<h2>Модель:</h2><h2>{{name}}</h2>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Виробник:</h3><h3>{{fabricator}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Розмір:</h3><h3>{{size}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Верхня дека:</h3><h3>{{upperDeck}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Нижня дека:</h3><h3>{{loverDeck}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Гриф:</h3><h3>{{vulture}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Накладка грифу:</h3><h3>{{fingerBoard}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Колір:</h3><h3>{{color}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Ціна:</h3><h3>{{price}} грн</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Гарантія:</h3><h3>{{guarantie}} місяців</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Кiлькiсть струн:</h3><h3>{{quantityOfStruns}} шт</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Матерiал корпусу:</h3><h3>{{bodyMaterial}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Конструкцiя грифу:</h3><h3>{{neckDesign}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Кiлькiсть ладiв:</h3><h3>{{numberOfFrets}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Мензура:</h3><h3>{{menzura}} мм</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Форма деки:</h3><h3>{{deckForm}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Тип звукознимача:</h3><h3>{{pickupType}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Форма корпусу:</h3><h3>{{bodyShape}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Бридж:</h3><h3>{{bridge}}</h3>
+		</div>
+
+		<div class="product-details-description">
+			<h3>Електронiка:</h3><h3>{{electronics}}</h3>
+		</div>
+
+	</div>
+</div>
+
+<div class="product-details-selection-middle">
+	<div class="assessment-product">
+			<input type="radio" name="star" id="star-5" class=" star star-5">
+			<label for="star-5" class="star star-5"></label>
+
+			<input type="radio" name="star" id="star-4" class="star star-4">
+			<label for="star-4" class="star star-4"></label>
+
+			<input type="radio" name="star" id="star-3" class="star star-3">
+			<label for="star-3" class="star star-3"></label>
+
+			<input type="radio" name="star" id="star-2" class="star star-2">
+			<label for="star-2" class="star star-2"></label>
+
+			<input {{action "voteOne"}} type="radio" name="star" id="star-1" class="star star-1">
+			<label for="star-1" class="star star-1"></label>
+	</div>
+
+	<div class="product-details-btn-section">
+		{{log id}}
+		{{#link-to "product.order" class="product-details-btn"}}Придбати<i class="fas fa-shopping-cart"></i>{{/link-to}}
+		<a {{action "addFavorite"}} class="product-details-btn">Додати в обране<i class="fas fa-heart"></i></a>
+		{{#link-to "classic-guitar" class="product-details-btn"}}Повернутись<i class="fas fa-sign-out-alt"></i>{{/link-to}}
+	</div>
+</div>
+
+<div class="product-details-selection-bottom">
+	<div class="product-details-writter-selection">
+		<h2>Залиште свій відгук про данний товар</h2>
+		{{#if session.isAuthenticated}}
+			<textarea id="commentForm" value={{description}} oninput={{action (mut description) value='target.value'}} >
+			</textarea>
+
+			<a {{action "addComment"}} class="product-details-btn">Відправити</a>
+		{{else}}
+		<div class="comment-false-auth">
+			<i class="fas fa-exclamation-triangle error"></i>
+			<h3>Для того, щоб залишати коментарі про товар, авторизуйтесь або пройдіть реєстрацію</h3>
+			{{#link-to "sign-up" class="lost-auth-btn"}}
+      			Реєстрація <i class="fas fa-user-plus"></i>
+    		{{/link-to}}
+		</div>
+		{{/if}}
+	</div>
+
+	<div class="comments-selection">
+		<h2>Відгуки інших користувачів</h2>
+		{{log comments.length}}
+		{{#each comments as |comment|}}
+			<div class="comment">
+				{{log comment}}
+				<div class="comment-user-name">
+					{{comment.username}}
+				</div>
+				<br>
+				{{comment.description}}
+				<br>
+				<br>
+				<div class="comment-date">
+					<h5>{{comment.dateComment}}</h5>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</div>
+{{yield}}

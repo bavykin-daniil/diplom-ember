@@ -1,0 +1,51 @@
+<div class="classic-catalog-banner">
+	<div class="inner-width">
+		<div class="banner-title-selection-top">
+			<h2 class="banner-catalog-title">Класичні гітари</h2>
+		</div>
+
+		<div class="banner-title-selection-middle">
+			<h2 class="banner-catalog-title">Класична гітара - королева музичного світу. За всі роки існування у відомому нам вигляді вона досить мало змінилася, стала лише досконаліше. У цьому вона просто незамінна, тому що багато сучасних і академічні напрямки існують завдяки любові композиторів і виконавців до її тембру і експресивності.</h2>
+		</div>
+
+		<div class="banner-title-selection-bottom">
+
+		</div>
+	</div>
+</div>
+
+<br>
+
+<div class="inner-width">
+	<h2 class="selection-title">Класичні гітари</h2>
+	<div class="border-late-product"></div>
+</div>
+
+<div class="catalog-selection">
+	<div class="side-bar">
+		{{classic-guitar-filter
+			name=name
+			size=size
+			fabricator=fabricator
+			uppderDeck=upperDeck
+			loverDeck=loverDeck
+			vulture=vulture
+			fingerBoard=fingerBoard
+			color=color
+			minPrice=minPrice
+			maxPrice=maxPrice
+		}}
+	</div>
+
+	<div class="product-selection">
+		{{#each model as |product|}}
+			{{ui-product
+				title=product.name
+				price=product.price
+				image=product.picture
+				productId=product.id
+			}}
+		{{/each}}
+	</div>
+</div>
+{{outlet}}
